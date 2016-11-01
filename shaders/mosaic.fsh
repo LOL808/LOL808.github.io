@@ -17,11 +17,5 @@ vec4 getMosaicColor(vec2 coord) {
 
 void main()
 {
-
-//    gl_FragColor = texture2D(CC_Texture0, v_texCoord);
-//        vec4 v_orColor = texture2D(CC_Texture0, v_texCoord);
-//        float gray = dot(v_orColor.rgb, vec3(0.3, 0.3, 0.3));
-//        gl_FragColor = vec4(gray, gray, gray, 1.0);
     gl_FragColor = getMosaicColor(v_texCoord);
-
 }
