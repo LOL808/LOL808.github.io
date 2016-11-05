@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OpenGL_Blend</title>
+	<link rel="stylesheet" href="../styles/mainStyle.css">
+</head>
+<body>
+	<div class="container">
+		<p>使用融混时有两个颜色：目标颜色(destination color)、源颜色(source color)。当OpenGL像已有帧缓存中颜色（目标颜色）和第二个装载进帧缓存的对象的颜色（源颜色）进行混合来实现两个对象颜色的调和</p>
+		<p>使用glEnable(GL_BLEND)激活融混特性<br/>使用glDisable(GL_BLEND)关闭融混特性<br/></p>
+		
+		<p style="color:#b55;">如果颜色融混没有被激活，那么OpenGL则会简单粗暴的使用源颜色替换掉目标颜色</p>
+		<p>融混时需要指定两个因子来产生不同的颜色效果。一个指定给当前帧缓存中的"目标"对象，而另外一个自然针对新添加进来的"源"对象。<br/>
+			源颜色表示为&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RGBA(R_S,G_S,B_S,A_S)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;源颜色因子表示为(S_R,S_G,S_B,S_A)<br/>
+			目标颜色辨识为&nbsp;&nbsp;RGBA(R_D,G_D,B_D,A_D)&nbsp;&nbsp;目标颜色因子表示为(D_R,D_G,D_B,D_A)
+		</p>
+	
+		<p style="text-indent:3em;font-size:22px;">融混方程:(R_S*S_R+R_D*D_R, G_S*S_G+G_D*D_G, B_S*S_B+B_D*D_B, A_S*S_A+A_D*D_A)</p>
+		
+		<p>其实就是融混颜色的各个分量为两个颜色对应的分量乘以各自因子并且相加，并且归一<br/>
+			使用glBlendFunc(srcFactor,dstFactor)指定源颜色因子和目标颜色因子
+		</p>
+		
+		
+	</div>
+</body>
+</html>
