@@ -23,6 +23,10 @@ ul{
 /*			cursor: url('siteimgs/1.gif'), auto;*/
 }
 
+a{
+	text-decoration:none;
+}
+
 body {
 	margin-top: 80px;
 	margin-left: auto;
